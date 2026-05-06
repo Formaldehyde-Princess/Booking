@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formaldehyde Princess | Alternative Fashion / Make-up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070609;
+      --bg-2: #100912;
+      --panel: #151018;
+      --panel-soft: #211827;
+      --text: #fff7f2;
+      --muted: #b9a8b8;
+      --accent: #d24b7a;
+      --accent-2: #8d3cff;
+      --accent-dark: #6f1230;
+      --gold: #d8b071;
+      --border: rgba(255,255,255,0.13);
+      --shadow: 0 24px 70px rgba(0,0,0,0.55);
+      --glow: 0 0 34px rgba(210,75,122,0.22);
+      --radius: 24px;
+      --hero-image: url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80");
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(141,60,255,0.18), transparent 32rem),
+        radial-gradient(circle at 85% 20%, rgba(210,75,122,0.18), transparent 28rem),
+        linear-gradient(180deg, var(--bg), var(--bg-2) 46%, #070609);
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7,6,9,0.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.02rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(210,75,122,0.28);
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--panel-soft);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      border-color: rgba(210,75,122,0.65);
+      box-shadow: 0 0 22px rgba(210,75,122,0.18);
+    }
+
+    .btn:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff7f2;
+      box-shadow: 0 0 28px rgba(210,75,122,0.24);
+    }
+
+    .btn-danger {
+      background: rgba(255, 79, 79, 0.13);
+      color: #ffb9b9;
+      border-color: rgba(255, 79, 79, 0.35);
+    }
+
+    .hero {
+      padding: 72px 0 44px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(2.25rem, 7vw, 5.65rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      margin-bottom: 22px;
+      text-shadow: 0 0 24px rgba(141,60,255,0.22), 0 8px 0 rgba(210,75,122,0.18);
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      min-height: 520px;
+      border-radius: var(--radius);
+      background:
+        linear-gradient(rgba(7,6,9,0.12), rgba(7,6,9,0.78)),
+        radial-gradient(circle at 70% 18%, rgba(210,75,122,0.26), transparent 18rem),
+        var(--hero-image) center/cover;
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: var(--shadow), var(--glow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 16px;
+      border: 1px solid rgba(216,176,113,0.35);
+      border-radius: 18px;
+      pointer-events: none;
+    }
+
+    .hero-card-note {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(10,7,12,0.74);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(216,176,113,0.28);
+    }
+
+    .hero-card-note p {
+      color: var(--text);
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.08rem;
+      line-height: 1.35;
+      font-style: italic;
+    }
+
+    .visibility-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .visibility-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(16,11,19,0.78);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .visibility-option input {
+      width: auto;
+      min-height: auto;
+      accent-color: var(--accent);
+    }
+
+    .hidden-by-setting {
+      display: none !important;
+    }
+
+    .section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-title h2 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+      letter-spacing: -0.035em;
+      text-shadow: 0 0 18px rgba(210,75,122,0.18);
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(33,24,39,0.96), rgba(15,9,18,0.96));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .admin-only {
+      display: none !important;
+    }
+
+    body.admin-mode .admin-only {
+      display: grid !important;
+    }
+
+    body.admin-mode .admin-inline {
+      display: inline-flex !important;
+    }
+
+    .admin-inline {
+      display: none !important;
+    }
+
+    .admin-panel {
+      gap: 18px;
+      padding: 20px;
+      margin-bottom: 22px;
+    }
+
+    .admin-panel-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .admin-panel-header p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .upload-grid,
+    .bulk-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .bulk-toolbar {
+      display: grid;
+      gap: 14px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(16,11,19,0.78);
+      border: 1px solid rgba(216,176,113,0.18);
+    }
+
+    .bulk-toolbar-top,
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .selection-count {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      min-height: 46px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #100b13;
+      color: var(--text);
+      padding: 12px 14px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(210,75,122,0.75);
+      box-shadow: 0 0 0 3px rgba(210,75,122,0.12);
+    }
+
+    .upload-box {
+      border: 1px dashed rgba(216,176,113,0.34);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(16,11,19,0.78);
+    }
+
+    .small-note {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .chip {
+      white-space: nowrap;
+      border: 1px solid var(--border);
+      background: var(--panel-soft);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .chip.active {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff7f2;
+      border-color: rgba(255,255,255,0.16);
+      box-shadow: 0 0 20px rgba(210,75,122,0.24);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .photo-card {
+      position: relative;
+      min-height: 320px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: var(--panel-soft);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 18px 44px rgba(0,0,0,0.38);
+      cursor: pointer;
+    }
+
+    .photo-card.selected {
+      border-color: rgba(216,176,113,0.84);
+      box-shadow: 0 0 0 3px rgba(216,176,113,0.16), 0 18px 44px rgba(0,0,0,0.38), var(--glow);
+    }
+
+    .photo-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 46%, rgba(7,6,9,0.72));
+      pointer-events: none;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      transition: transform 0.35s ease;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .select-badge {
+      display: none;
+      position: absolute;
+      z-index: 4;
+      top: 12px;
+      left: 12px;
+      align-items: center;
+      gap: 8px;
+      min-height: 36px;
+      padding: 0 12px;
+      border-radius: 999px;
+      color: var(--text);
+      background: rgba(10,7,12,0.82);
+      border: 1px solid rgba(216,176,113,0.34);
+      backdrop-filter: blur(10px);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    body.admin-mode.select-mode .select-badge {
+      display: inline-flex;
+    }
+
+    .select-badge::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: transparent;
+    }
+
+    .photo-card.selected .select-badge::before {
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      border-color: transparent;
+    }
+
+    .photo-meta {
+      position: absolute;
+      z-index: 2;
+      inset: auto 12px 12px 12px;
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(10,7,12,0.76);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(216,176,113,0.25);
+    }
+
+    .photo-meta strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .photo-meta span {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .empty-gallery {
+      color: var(--muted);
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      grid-column: 1 / -1;
+    }
+
+    .pagination {
+      margin-top: 18px;
+      padding: 14px 0;
+    }
+
+    .page-status {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .booking-grid,
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .info-card {
+      padding: 26px;
+    }
+
+    .info-card h3 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .info-card p,
+    .info-card li {
+      color: var(--muted);
+    }
+
+    .info-card ul {
+      padding-left: 18px;
+      margin-top: 14px;
+    }
+
+    .booking-form,
+    .contact-form {
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .social-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(33,24,39,0.95), rgba(15,9,18,0.95));
+      border: 1px solid var(--border);
+      transition: 0.2s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(210,75,122,0.55);
+      box-shadow: 0 0 24px rgba(210,75,122,0.18);
+    }
+
+    .social-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .social-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: rgba(0,0,0,0.76);
+      backdrop-filter: blur(8px);
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      width: min(920px, 100%);
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(33,24,39,0.98), rgba(8,6,10,0.98));
+      border: 1px solid rgba(216,176,113,0.24);
+      box-shadow: var(--shadow), var(--glow);
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .modal-image-wrap {
+      min-height: 520px;
+      background: #050406;
+    }
+
+    .modal-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-content {
+      padding: 24px;
+    }
+
+    .modal-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .modal-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .detail-row {
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .detail-row span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .detail-row a {
+      color: #ff9fca;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .edit-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .edit-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    @media (max-width: 860px) {
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 16px;
+        right: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(21,16,24,0.98);
+        border: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero-grid,
+      .upload-grid,
+      .bulk-grid,
+      .booking-grid,
+      .contact-grid,
+      .two-col,
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .admin-panel-header {
+        display: block;
+      }
+
+      .admin-panel-header .btn {
+        margin-top: 12px;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+
+      .hero-card {
+        min-height: 420px;
+      }
+
+      .section-title {
+        display: block;
+      }
+
+      .section-title p {
+        margin-top: 10px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .links-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-image-wrap {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .gallery,
+      .links-grid,
+      .visibility-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        min-height: 380px;
+      }
+
+      .hero-card {
+        min-height: 360px;
+      }
+
+      .bulk-toolbar-top,
+      .pagination {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .bulk-toolbar-top .btn,
+      .pagination .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home"><span id="brandFirst">Formaldehyde</span> <span id="brandSecond">Princess</span></a>
+      <button class="btn mobile-menu-btn" id="menuBtn" type="button">Menu</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+        <a href="#links">Links</a>
+        <a class="btn btn-primary" href="#booking">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow" id="heroEyebrow">Alternative fashion / Make-up</div>
+          <h1 id="heroTitle">Formaldehyde Princess</h1>
+          <p id="heroIntro">
+            A moody portfolio space for alternative fashion, gothic glam, creative make-up, editorial modeling, booking requests, and social links.
+          </p>
+          <div class="hero-actions" id="heroActions">
+            <a class="btn btn-primary" href="#gallery">View Gallery</a>
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero-card" id="heroCard" aria-label="Featured portfolio image">
+          <div class="hero-card-note" id="heroQuoteWrap">
+            <p id="heroNoteText">Add a quote, lyric, or short mood statement here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow" id="galleryEyebrow">Portfolio</div>
+            <h2 id="galleryTitle">Alternative fashion / Make-up</h2>
+          </div>
+          <p id="galleryIntro">View the gallery by category. Select any photo to see title, credit, category, and links.</p>
+        </div>
+
+        <div class="panel admin-panel admin-only" id="adminPanel">
+          <div class="admin-panel-header">
+            <div>
+              <div class="eyebrow">Admin editor</div>
+              <h3>Upload, bulk organize, and edit portfolio details</h3>
+              <p>Images save in this browser for the prototype. Folder upload works in browsers that support directory selection.</p>
+            </div>
+            <button class="btn btn-danger admin-inline" id="adminLogoutBtn" type="button">Exit Admin</button>
+          </div>
+
+          <div class="bulk-toolbar">
+            <div class="bulk-toolbar-top">
+              <div>
+                <strong>Page text editor</strong>
+                <p class="selection-count">Update the main wording on the page. Changes save in this browser for the prototype.</p>
+              </div>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="editBrandFirst">Brand first word</label>
+                <input id="editBrandFirst" placeholder="Formaldehyde" />
+              </div>
+              <div>
+                <label for="editBrandSecond">Brand second word</label>
+                <input id="editBrandSecond" placeholder="Princess" />
+              </div>
+            </div>
+
+            <div>
+              <label for="editHeroTitleText">Hero title</label>
+              <input id="editHeroTitleText" placeholder="Main page title" />
+            </div>
+
+            <div>
+              <label for="editHeroIntroText">Hero intro paragraph</label>
+              <textarea id="editHeroIntroText" placeholder="Main intro text"></textarea>
+            </div>
+
+            <div>
+              <label for="editHeroEyebrowText">Hero small header</label>
+              <input id="editHeroEyebrowText" placeholder="Alternative fashion / Make-up" />
+            </div>
+
+            <div>
+              <label for="editHeroNoteBodyText">Header image quote</label>
+              <input id="editHeroNoteBodyText" placeholder="Add a quote, lyric, or short mood statement here." />
+            </div>
+
+            <div>
+              <label>Show / hide page areas</label>
+              <div class="visibility-grid">
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="heroIntro" checked /> Hero intro text</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="heroButtons" checked /> Hero buttons</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="heroQuote" checked /> Header quote</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="galleryIntro" checked /> Gallery intro</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="bookingSection" checked /> Booking section</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="contactSection" checked /> Contact section</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="linksSection" checked /> Social links section</label>
+                <label class="visibility-option"><input type="checkbox" data-visibility-key="footer" checked /> Footer</label>
+              </div>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="editGalleryTitleText">Gallery title</label>
+                <input id="editGalleryTitleText" placeholder="Alternative fashion / Make-up" />
+              </div>
+              <div>
+                <label for="editBookingTitleText">Booking title</label>
+                <input id="editBookingTitleText" placeholder="Booking request" />
+              </div>
+            </div>
+
+            <div>
+              <label for="editGalleryIntroText">Gallery intro</label>
+              <textarea id="editGalleryIntroText" placeholder="Gallery description"></textarea>
+            </div>
+
+            <div>
+              <label for="editBookingIntroText">Booking intro</label>
+              <textarea id="editBookingIntroText" placeholder="Booking description"></textarea>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="editContactEmailText">Contact email</label>
+                <input id="editContactEmailText" placeholder="hello@example.com" />
+              </div>
+              <div>
+                <label for="editContactLocationText">Contact location</label>
+                <input id="editContactLocationText" placeholder="Your City, State" />
+              </div>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="editSocialTitleText">Social section title</label>
+                <input id="editSocialTitleText" placeholder="Social coven" />
+              </div>
+              <div>
+                <label for="editFooterText">Footer text</label>
+                <input id="editFooterText" placeholder="© Formaldehyde Princess..." />
+              </div>
+            </div>
+
+            <div class="edit-actions">
+              <button class="btn btn-primary" id="saveTextBtn" type="button">Save Page Text</button>
+              <button class="btn" id="resetTextBtn" type="button">Reset Text</button>
+            </div>
+          </div>
+
+          <div class="upload-grid">
+            <div class="upload-box">
+              <label for="heroPhotoUpload">Header photo</label>
+              <input id="heroPhotoUpload" type="file" accept="image/*" />
+              <span class="small-note">Replace the large header image at the top of the page.</span>
+            </div>
+
+            <div class="upload-box">
+              <label>&nbsp;</label>
+              <div class="edit-actions">
+                <button class="btn btn-primary" id="setHeroPhotoBtn" type="button">Set Header Photo</button>
+                <button class="btn" id="resetHeroPhotoBtn" type="button">Reset Header</button>
+              </div>
+              <span class="small-note">Header image saves in this browser for the prototype.</span>
+            </div>
+          </div>
+
+          <div class="upload-grid">
+            <div class="upload-box">
+              <label for="imageUpload">Upload one or more images</label>
+              <input id="imageUpload" type="file" accept="image/*" multiple />
+              <span class="small-note">Choose individual images, or select several at once.</span>
+            </div>
+
+            <div class="upload-box">
+              <label for="folderUpload">Upload a folder of images</label>
+              <input id="folderUpload" type="file" accept="image/*" multiple webkitdirectory directory />
+              <span class="small-note">This imports image files from the selected folder and subfolders.</span>
+            </div>
+          </div>
+
+          <div class="upload-grid">
+            <div>
+              <label for="categorySelect">Category for new uploads</label>
+              <select id="categorySelect"></select>
+            </div>
+            <div>
+              <label for="newCategoryInput">Or add a new category</label>
+              <input id="newCategoryInput" placeholder="Example: Latex, Cyber Goth, Beauty" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="addImagesBtn" type="button">Add Selected Images</button>
+
+          <div class="bulk-toolbar">
+            <div class="bulk-toolbar-top">
+              <div>
+                <strong>Bulk select photos</strong>
+                <p class="selection-count" id="selectionCount">0 selected</p>
+              </div>
+              <div class="edit-actions">
+                <button class="btn" id="toggleSelectModeBtn" type="button">Select Multiple</button>
+                <button class="btn" id="selectVisibleBtn" type="button">Select Visible</button>
+                <button class="btn" id="clearSelectionBtn" type="button">Clear</button>
+              </div>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="bulkCategorySelect">Move selected to category</label>
+                <select id="bulkCategorySelect"></select>
+              </div>
+              <div>
+                <label for="bulkNewCategoryInput">Or move to new category</label>
+                <input id="bulkNewCategoryInput" placeholder="New category name" />
+              </div>
+            </div>
+
+            <div class="edit-actions">
+              <button class="btn btn-primary" id="moveSelectedBtn" type="button">Move Selected</button>
+              <button class="btn btn-danger" id="deleteSelectedBtn" type="button">Delete Selected</button>
+            </div>
+          </div>
+
+          <div class="bulk-toolbar">
+            <div class="bulk-toolbar-top">
+              <div>
+                <strong>Category manager</strong>
+                <p class="selection-count">Deleting a category moves its photos to Uncategorized.</p>
+              </div>
+            </div>
+
+            <div class="bulk-grid">
+              <div>
+                <label for="deleteCategorySelect">Category to delete</label>
+                <select id="deleteCategorySelect"></select>
+              </div>
+              <div>
+                <label>&nbsp;</label>
+                <button class="btn btn-danger" id="deleteCategoryBtn" type="button" style="width:100%;">Delete Category</button>
+              </div>
+            </div>
+          </div>
+
+          <span class="small-note">Click a photo to edit details. Turn on Select Multiple to move or delete groups of photos.</span>
+        </div>
+
+        <div class="filter-row" id="filterRow"></div>
+        <div class="gallery" id="galleryGrid"></div>
+
+        <div class="pagination" id="paginationControls">
+          <button class="btn" id="prevPageBtn" type="button">← Previous</button>
+          <span class="page-status" id="pageStatus">Page 1 of 1</span>
+          <button class="btn" id="nextPageBtn" type="button">Next →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow" id="bookingEyebrow">Schedule</div>
+            <h2 id="bookingTitle">Booking request</h2>
+          </div>
+          <p id="bookingIntro">Use this simple booking form for now. Later we can connect it to email, Google Calendar, Calendly, or a database.</p>
+        </div>
+
+        <div class="booking-grid">
+          <div class="panel info-card">
+            <h3 id="bookingInfoTitle">Available for</h3>
+            <p id="bookingInfoText">Alternative fashion, make-up looks, photoshoots, creative direction, runway events, brand campaigns, and portfolio collaborations.</p>
+            <ul>
+              <li>Fast mobile-friendly booking form</li>
+              <li>Service type and date request</li>
+              <li>Easy upgrade to Calendly later</li>
+            </ul>
+          </div>
+
+          <form class="panel booking-form" id="bookingForm">
+            <div class="two-col">
+              <div>
+                <label for="bookName">Name</label>
+                <input id="bookName" required placeholder="Your name" />
+              </div>
+              <div>
+                <label for="bookEmail">Email</label>
+                <input id="bookEmail" required type="email" placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="two-col">
+              <div>
+                <label for="bookType">Booking type</label>
+                <select id="bookType">
+                  <option>Photoshoot</option>
+                  <option>Make-up</option>
+                  <option>Alternative Fashion</option>
+                  <option>Runway</option>
+                  <option>Commercial</option>
+                  <option>Consultation</option>
+                </select>
+              </div>
+              <div>
+                <label for="bookDate">Preferred date</label>
+                <input id="bookDate" type="date" />
+              </div>
+            </div>
+
+            <div>
+              <label for="bookMessage">Details</label>
+              <textarea id="bookMessage" placeholder="Tell us about the project, location, budget, and timing."></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Submit Booking Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow" id="contactEyebrow">Contact</div>
+            <h2 id="contactTitle">Get in touch</h2>
+          </div>
+          <p id="contactIntro">This contact area can later be connected to Formspree, Netlify Forms, EmailJS, or a backend database.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="panel info-card">
+            <h3 id="contactInfoTitle">Contact details</h3>
+            <p><strong>Email:</strong> <span id="contactEmailText">hello@example.com</span></p>
+            <p><strong>Location:</strong> <span id="contactLocationText">Your City, State</span></p>
+            <p><strong>Response time:</strong> <span id="contactResponseText">Usually within 24–48 hours.</span></p>
+          </div>
+
+          <form class="panel contact-form" id="contactForm">
+            <div class="two-col">
+              <div>
+                <label for="contactName">Name</label>
+                <input id="contactName" required placeholder="Your name" />
+              </div>
+              <div>
+                <label for="contactEmail">Email</label>
+                <input id="contactEmail" required type="email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div>
+              <label for="contactSubject">Subject</label>
+              <input id="contactSubject" placeholder="What is this about?" />
+            </div>
+            <div>
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" required placeholder="Write your message here."></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <div class="eyebrow" id="socialEyebrow">Follow</div>
+            <h2 id="socialTitle">Social coven</h2>
+          </div>
+          <p id="socialIntro">Replace these placeholders with real social media profile links.</p>
+        </div>
+
+        <div class="links-grid">
+          <a class="social-card" href="https://instagram.com" target="_blank" rel="noopener">
+            <strong>Instagram</strong>
+            <span>@formaldehyde_princess</span>
+          </a>
+          <a class="social-card" href="https://tiktok.com" target="_blank" rel="noopener">
+            <strong>TikTok</strong>
+            <span>@yourhandle</span>
+          </a>
+          <a class="social-card" href="https://facebook.com" target="_blank" rel="noopener">
+            <strong>Facebook</strong>
+            <span>Your page</span>
+          </a>
+          <a class="social-card" href="https://youtube.com" target="_blank" rel="noopener">
+            <strong>YouTube</strong>
+            <span>Your channel</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="photoModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-grid">
+        <div class="modal-image-wrap">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        <div class="modal-content">
+          <div class="modal-top">
+            <div>
+              <div class="eyebrow" id="modalModeLabel">Details</div>
+              <h3 class="modal-title" id="modalTitle">Photo title</h3>
+            </div>
+            <button class="btn" id="closeModalBtn" type="button">Close</button>
+          </div>
+
+          <div id="viewerDetails">
+            <div class="detail-row">
+              <span>Category</span>
+              <p id="detailCategory"></p>
+            </div>
+            <div class="detail-row">
+              <span>Photo credit</span>
+              <p id="detailCredit"></p>
+            </div>
+          </div>
+
+          <form class="edit-form admin-only" id="editForm">
+            <div>
+              <label for="editTitle">Title</label>
+              <input id="editTitle" placeholder="Photo title" />
+            </div>
+            <div>
+              <label for="editCategory">Category</label>
+              <input id="editCategory" placeholder="Example: Editorial, Make-up, Runway" />
+            </div>
+            <div>
+              <label for="editCredit">Photo credit</label>
+              <input id="editCredit" placeholder="Photographer, stylist, MUA, brand, etc." />
+            </div>
+            <div>
+              <label for="editCreditLink">Credit link</label>
+              <input id="editCreditLink" type="url" placeholder="https://example.com/profile" />
+            </div>
+            <div class="edit-actions">
+              <button class="btn btn-primary" type="submit">Save Details</button>
+              <button class="btn btn-danger" id="deletePhotoBtn" type="button">Delete Photo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="pageFooter">
+    <div class="container">
+      <p id="footerText">© <span id="year"></span> Formaldehyde Princess. Alternative fashion / Make-up.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Prototype-only password. This hides the editor from casual visitors,
+    // but it is not secure because anyone can inspect this file.
+    const ADMIN_PASSWORD = 'demo123';
+    const ITEMS_PER_PAGE = 9;
+
+    const defaultSiteText = {
+      brandFirst: 'Formaldehyde',
+      brandSecond: 'Princess',
+      heroEyebrow: 'Alternative fashion / Make-up',
+      heroTitle: 'Formaldehyde Princess',
+      heroIntro: 'A moody portfolio space for alternative fashion, gothic glam, creative make-up, editorial modeling, booking requests, and social links.',
+      heroNoteText: 'Add a quote, lyric, or short mood statement here.',
+      galleryEyebrow: 'Portfolio',
+      galleryTitle: 'Alternative fashion / Make-up',
+      galleryIntro: 'View the gallery by category. Select any photo to see title, credit, category, and links.',
+      bookingEyebrow: 'Schedule',
+      bookingTitle: 'Booking request',
+      bookingIntro: 'Use this simple booking form for now. Later we can connect it to email, Google Calendar, Calendly, or a database.',
+      bookingInfoTitle: 'Available for',
+      bookingInfoText: 'Alternative fashion, make-up looks, photoshoots, creative direction, runway events, brand campaigns, and portfolio collaborations.',
+      contactEyebrow: 'Contact',
+      contactTitle: 'Get in touch',
+      contactIntro: 'This contact area can later be connected to Formspree, Netlify Forms, EmailJS, or a backend database.',
+      contactInfoTitle: 'Contact details',
+      contactEmailText: 'hello@example.com',
+      contactLocationText: 'Your City, State',
+      contactResponseText: 'Usually within 24–48 hours.',
+      socialEyebrow: 'Follow',
+      socialTitle: 'Social coven',
+      socialIntro: 'Replace these placeholders with real social media profile links.',
+      footerText: '© {year} Formaldehyde Princess. Alternative fashion / Make-up.'
+    };
+
+    const textFieldMap = {
+      editBrandFirst: 'brandFirst',
+      editBrandSecond: 'brandSecond',
+      editHeroEyebrowText: 'heroEyebrow',
+      editHeroTitleText: 'heroTitle',
+      editHeroIntroText: 'heroIntro',
+      editHeroNoteBodyText: 'heroNoteText',
+      editGalleryTitleText: 'galleryTitle',
+      editGalleryIntroText: 'galleryIntro',
+      editBookingTitleText: 'bookingTitle',
+      editBookingIntroText: 'bookingIntro',
+      editContactEmailText: 'contactEmailText',
+      editContactLocationText: 'contactLocationText',
+      editSocialTitleText: 'socialTitle',
+      editFooterText: 'footerText'
+    };
+
+    const defaultVisibility = {
+      heroIntro: true,
+      heroButtons: true,
+      heroQuote: true,
+      galleryIntro: true,
+      bookingSection: true,
+      contactSection: true,
+      linksSection: true,
+      footer: true
+    };
+
+    const visibilityElementMap = {
+      heroIntro: 'heroIntro',
+      heroButtons: 'heroActions',
+      heroQuote: 'heroQuoteWrap',
+      galleryIntro: 'galleryIntro',
+      bookingSection: 'booking',
+      contactSection: 'contact',
+      linksSection: 'links',
+      footer: 'pageFooter'
+    };
+
+    const defaultCategories = [
+      'All',
+      'Alternative Fashion',
+      'Make-up',
+      'Editorial',
+      'Headshots',
+      'Runway',
+      'Commercial',
+      'Lifestyle'
+    ];
+
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const adminLogoutBtn = document.getElementById('adminLogoutBtn');
+    const heroPhotoUpload = document.getElementById('heroPhotoUpload');
+    const setHeroPhotoBtn = document.getElementById('setHeroPhotoBtn');
+    const resetHeroPhotoBtn = document.getElementById('resetHeroPhotoBtn');
+    const saveTextBtn = document.getElementById('saveTextBtn');
+    const resetTextBtn = document.getElementById('resetTextBtn');
+    const imageUpload = document.getElementById('imageUpload');
+    const folderUpload = document.getElementById('folderUpload');
+    const categorySelect = document.getElementById('categorySelect');
+    const newCategoryInput = document.getElementById('newCategoryInput');
+    const addImagesBtn = document.getElementById('addImagesBtn');
+    const galleryGrid = document.getElementById('galleryGrid');
+    const filterRow = document.getElementById('filterRow');
+    const prevPageBtn = document.getElementById('prevPageBtn');
+    const nextPageBtn = document.getElementById('nextPageBtn');
+    const pageStatus = document.getElementById('pageStatus');
+    const paginationControls = document.getElementById('paginationControls');
+    const toggleSelectModeBtn = document.getElementById('toggleSelectModeBtn');
+    const selectVisibleBtn = document.getElementById('selectVisibleBtn');
+    const clearSelectionBtn = document.getElementById('clearSelectionBtn');
+    const selectionCount = document.getElementById('selectionCount');
+    const bulkCategorySelect = document.getElementById('bulkCategorySelect');
+    const bulkNewCategoryInput = document.getElementById('bulkNewCategoryInput');
+    const moveSelectedBtn = document.getElementById('moveSelectedBtn');
+    const deleteSelectedBtn = document.getElementById('deleteSelectedBtn');
+    const deleteCategorySelect = document.getElementById('deleteCategorySelect');
+    const deleteCategoryBtn = document.getElementById('deleteCategoryBtn');
+    const bookingForm = document.getElementById('bookingForm');
+    const contactForm = document.getElementById('contactForm');
+    const photoModal = document.getElementById('photoModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalModeLabel = document.getElementById('modalModeLabel');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const viewerDetails = document.getElementById('viewerDetails');
+    const detailCategory = document.getElementById('detailCategory');
+    const detailCredit = document.getElementById('detailCredit');
+    const editForm = document.getElementById('editForm');
+    const editTitle = document.getElementById('editTitle');
+    const editCategory = document.getElementById('editCategory');
+    const editCredit = document.getElementById('editCredit');
+    const editCreditLink = document.getElementById('editCreditLink');
+    const deletePhotoBtn = document.getElementById('deletePhotoBtn');
+
+    let siteText = {
+      ...defaultSiteText,
+      ...(JSON.parse(localStorage.getItem('fpSiteText')) || {})
+    };
+    let siteVisibility = {
+      ...defaultVisibility,
+      ...(JSON.parse(localStorage.getItem('fpVisibility')) || {})
+    };
+    let selectedCategory = 'All';
+    let currentPage = 1;
+    let selectionMode = false;
+    let selectedPhotoIds = new Set();
+    let activePhotoId = null;
+    let deletedCategories = JSON.parse(localStorage.getItem('fpDeletedCategories')) || [];
+    let heroPhoto = localStorage.getItem('fpHeroPhoto') || '';
+    let uploadedImages = JSON.parse(localStorage.getItem('fpImages')) || [
+      {
+        id: 1,
+        title: 'Sample Editorial Look',
+        category: 'Editorial',
+        credit: 'Sample photographer',
+        creditLink: 'https://instagram.com',
+        src: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        id: 2,
+        title: 'Sample Make-up Detail',
+        category: 'Make-up',
+        credit: 'Creative team credit',
+        creditLink: '',
+        src: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80'
+      },
+      {
+        id: 3,
+        title: 'Sample Alternative Fashion',
+        category: 'Alternative Fashion',
+        credit: 'Styling credit',
+        creditLink: '',
+        src: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80'
+      }
+    ];
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function setTextContent(id, value) {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    }
+
+    function applySiteText() {
+      const year = new Date().getFullYear();
+      setTextContent('brandFirst', siteText.brandFirst);
+      setTextContent('brandSecond', siteText.brandSecond);
+      setTextContent('heroEyebrow', siteText.heroEyebrow);
+      setTextContent('heroTitle', siteText.heroTitle);
+      setTextContent('heroIntro', siteText.heroIntro);
+      setTextContent('heroNoteText', siteText.heroNoteText);
+      setTextContent('galleryEyebrow', siteText.galleryEyebrow);
+      setTextContent('galleryTitle', siteText.galleryTitle);
+      setTextContent('galleryIntro', siteText.galleryIntro);
+      setTextContent('bookingEyebrow', siteText.bookingEyebrow);
+      setTextContent('bookingTitle', siteText.bookingTitle);
+      setTextContent('bookingIntro', siteText.bookingIntro);
+      setTextContent('bookingInfoTitle', siteText.bookingInfoTitle);
+      setTextContent('bookingInfoText', siteText.bookingInfoText);
+      setTextContent('contactEyebrow', siteText.contactEyebrow);
+      setTextContent('contactTitle', siteText.contactTitle);
+      setTextContent('contactIntro', siteText.contactIntro);
+      setTextContent('contactInfoTitle', siteText.contactInfoTitle);
+      setTextContent('contactEmailText', siteText.contactEmailText);
+      setTextContent('contactLocationText', siteText.contactLocationText);
+      setTextContent('contactResponseText', siteText.contactResponseText);
+      setTextContent('socialEyebrow', siteText.socialEyebrow);
+      setTextContent('socialTitle', siteText.socialTitle);
+      setTextContent('socialIntro', siteText.socialIntro);
+      setTextContent('footerText', siteText.footerText.replace('{year}', year));
+    }
+
+    function populateTextEditor() {
+      Object.entries(textFieldMap).forEach(([fieldId, textKey]) => {
+        const field = document.getElementById(fieldId);
+        if (field) field.value = siteText[textKey] || '';
+      });
+
+      Object.entries(siteVisibility).forEach(([key, value]) => {
+        const checkbox = document.querySelector(`[data-visibility-key="${key}"]`);
+        if (checkbox) checkbox.checked = Boolean(value);
+      });
+    }
+
+    function applyVisibility() {
+      Object.entries(visibilityElementMap).forEach(([key, elementId]) => {
+        const element = document.getElementById(elementId);
+        if (!element) return;
+        element.classList.toggle('hidden-by-setting', !siteVisibility[key]);
+      });
+    }
+
+    function saveVisibilitySettings() {
+      document.querySelectorAll('[data-visibility-key]').forEach(checkbox => {
+        siteVisibility[checkbox.dataset.visibilityKey] = checkbox.checked;
+      });
+      localStorage.setItem('fpVisibility', JSON.stringify(siteVisibility));
+      applyVisibility();
+    }
+
+    function saveSiteText() {
+      if (!isAdmin()) return;
+      Object.entries(textFieldMap).forEach(([fieldId, textKey]) => {
+        const field = document.getElementById(fieldId);
+        if (field) siteText[textKey] = field.value.trim() || defaultSiteText[textKey] || '';
+      });
+      localStorage.setItem('fpSiteText', JSON.stringify(siteText));
+      saveVisibilitySettings();
+      applySiteText();
+      alert('Page text saved.');
+    }
+
+    function resetSiteText() {
+      if (!isAdmin()) return;
+      const confirmed = confirm('Reset all editable page text back to the defaults?');
+      if (!confirmed) return;
+      siteText = { ...defaultSiteText };
+      siteVisibility = { ...defaultVisibility };
+      localStorage.removeItem('fpSiteText');
+      localStorage.removeItem('fpVisibility');
+      applySiteText();
+      applyVisibility();
+      populateTextEditor();
+    }
+
+    function applyHeroPhoto() {
+      if (heroPhoto) {
+        document.documentElement.style.setProperty('--hero-image', `url("${heroPhoto}")`);
+      } else {
+        document.documentElement.style.removeProperty('--hero-image');
+      }
+    }
+
+    function isAdmin() {
+      return sessionStorage.getItem('fpAdmin') === 'true';
+    }
+
+    function saveImages() {
+      localStorage.setItem('fpImages', JSON.stringify(uploadedImages));
+    }
+
+    function saveDeletedCategories() {
+      localStorage.setItem('fpDeletedCategories', JSON.stringify(deletedCategories));
+    }
+
+    function getCategories() {
+      const imageCategories = uploadedImages.map(image => image.category).filter(Boolean);
+      return [...new Set([...defaultCategories, ...imageCategories])]
+        .filter(category => category === 'All' || !deletedCategories.includes(category));
+    }
+
+    function getEditableCategories() {
+      return getCategories().filter(category => category !== 'All');
+    }
+
+    function getFilteredImages() {
+      return selectedCategory === 'All'
+        ? uploadedImages
+        : uploadedImages.filter(image => image.category === selectedCategory);
+    }
+
+    function getTotalPages() {
+      return Math.max(1, Math.ceil(getFilteredImages().length / ITEMS_PER_PAGE));
+    }
+
+    function clampCurrentPage() {
+      currentPage = Math.min(Math.max(1, currentPage), getTotalPages());
+    }
+
+    function getVisibleImages() {
+      clampCurrentPage();
+      const filtered = getFilteredImages();
+      const start = (currentPage - 1) * ITEMS_PER_PAGE;
+      return filtered.slice(start, start + ITEMS_PER_PAGE);
+    }
+
+    function normalizeUrl(url) {
+      const trimmed = url.trim();
+      if (!trimmed) return '';
+      if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) return trimmed;
+      return `https://${trimmed}`;
+    }
+
+    function escapeHtml(text) {
+      return String(text || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function setAdminMode(enabled) {
+      if (enabled) {
+        sessionStorage.setItem('fpAdmin', 'true');
+        document.body.classList.add('admin-mode');
+      } else {
+        sessionStorage.removeItem('fpAdmin');
+        document.body.classList.remove('admin-mode');
+        selectionMode = false;
+        selectedPhotoIds.clear();
+        closePhotoModal();
+      }
+      updateSelectionModeClass();
+      renderAll();
+    }
+
+    function updateSelectionModeClass() {
+      document.body.classList.toggle('select-mode', selectionMode && isAdmin());
+      toggleSelectModeBtn.textContent = selectionMode ? 'Selection On' : 'Select Multiple';
+    }
+
+    function updateSelectionCount() {
+      const count = selectedPhotoIds.size;
+      selectionCount.textContent = `${count} selected`;
+      moveSelectedBtn.disabled = count === 0;
+      deleteSelectedBtn.disabled = count === 0;
+      clearSelectionBtn.disabled = count === 0;
+    }
+
+    function clearSelection() {
+      selectedPhotoIds.clear();
+      updateSelectionCount();
+      renderGallery();
+    }
+
+    function openAdminPrompt() {
+      const password = prompt('Enter admin password:');
+      if (password === null) return;
+
+      if (password === ADMIN_PASSWORD) {
+        setAdminMode(true);
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        alert('Incorrect password.');
+      }
+    }
+
+    function renderCategoryControls() {
+      const categories = getCategories();
+
+      if (!categories.includes(selectedCategory)) {
+        selectedCategory = 'All';
+        currentPage = 1;
+      }
+
+      filterRow.innerHTML = categories.map(category => `
+        <button class="chip ${category === selectedCategory ? 'active' : ''}" data-category="${escapeHtml(category)}" type="button">${escapeHtml(category)}</button>
+      `).join('');
+
+      const uploadCategories = getEditableCategories();
+      const options = uploadCategories.map(category => `
+        <option value="${escapeHtml(category)}">${escapeHtml(category)}</option>
+      `).join('');
+
+      categorySelect.innerHTML = options;
+      bulkCategorySelect.innerHTML = options;
+      deleteCategorySelect.innerHTML = options;
+      deleteCategoryBtn.disabled = uploadCategories.length === 0;
+    }
+
+    function renderGallery() {
+      const filtered = getFilteredImages();
+      const visible = getVisibleImages();
+
+      galleryGrid.innerHTML = '';
+
+      if (filtered.length === 0) {
+        galleryGrid.innerHTML = '<div class="empty-gallery">No images in this category yet.</div>';
+        renderPagination();
+        updateSelectionCount();
+        return;
+      }
+
+      visible.forEach(image => {
+        const card = document.createElement('article');
+        const isSelected = selectedPhotoIds.has(image.id);
+        card.className = `photo-card ${isSelected ? 'selected' : ''}`;
+        card.dataset.id = image.id;
+        card.innerHTML = `
+          <img src="${image.src}" alt="${escapeHtml(image.title)}">
+          <span class="select-badge">Select</span>
+          <div class="photo-meta">
+            <strong>${escapeHtml(image.title || 'Untitled')}</strong>
+            <span>${escapeHtml(image.category || 'Uncategorized')}</span>
+          </div>
+        `;
+        galleryGrid.appendChild(card);
+      });
+
+      renderPagination();
+      updateSelectionCount();
+    }
+
+    function renderPagination() {
+      const totalItems = getFilteredImages().length;
+      const totalPages = getTotalPages();
+      clampCurrentPage();
+
+      const start = totalItems === 0 ? 0 : (currentPage - 1) * ITEMS_PER_PAGE + 1;
+      const end = Math.min(currentPage * ITEMS_PER_PAGE, totalItems);
+
+      prevPageBtn.disabled = currentPage <= 1;
+      nextPageBtn.disabled = currentPage >= totalPages;
+      pageStatus.textContent = `Page ${currentPage} of ${totalPages} • Showing ${start}-${end} of ${totalItems}`;
+      paginationControls.style.display = totalItems > ITEMS_PER_PAGE ? 'flex' : 'flex';
+    }
+
+    function renderAll() {
+      renderCategoryControls();
+      renderGallery();
+      updateSelectionCount();
+      populateTextEditor();
+    }
+
+    function readFileAsDataUrl(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = event => resolve(event.target.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function compressImageFile(file, maxWidth = 1600, quality = 0.82) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = event => {
+          const image = new Image();
+
+          image.onload = () => {
+            const scale = Math.min(1, maxWidth / image.width);
+            const width = Math.round(image.width * scale);
+            const height = Math.round(image.height * scale);
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            canvas.width = width;
+            canvas.height = height;
+            context.drawImage(image, 0, 0, width, height);
+
+            resolve(canvas.toDataURL('image/jpeg', quality));
+          };
+
+          image.onerror = reject;
+          image.src = event.target.result;
+        };
+
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function setHeroPhoto() {
+      if (!isAdmin()) return;
+
+      const file = heroPhotoUpload.files[0];
+
+      if (!file || !file.type.startsWith('image/')) {
+        alert('Choose an image for the header first.');
+        return;
+      }
+
+      try {
+        heroPhoto = await compressImageFile(file, 1600, 0.82);
+        localStorage.setItem('fpHeroPhoto', heroPhoto);
+        heroPhotoUpload.value = '';
+        applyHeroPhoto();
+        alert('Header photo updated.');
+      } catch (error) {
+        console.error(error);
+        alert('That image is still too large for browser storage. Try a smaller image, or clear some uploaded gallery images first.');
+      }
+    }
+
+    function resetHeroPhoto() {
+      if (!isAdmin()) return;
+
+      const confirmed = confirm('Reset the header photo back to the sample image?');
+      if (!confirmed) return;
+
+      heroPhoto = '';
+      localStorage.removeItem('fpHeroPhoto');
+      heroPhotoUpload.value = '';
+      applyHeroPhoto();
+    }
+
+    async function addSelectedImages() {
+      if (!isAdmin()) return;
+
+      const files = [
+        ...Array.from(imageUpload.files || []),
+        ...Array.from(folderUpload.files || [])
+      ].filter(file => file.type.startsWith('image/'));
+
+      if (files.length === 0) {
+        alert('Choose at least one image or folder containing images.');
+        return;
+      }
+
+      const typedCategory = newCategoryInput.value.trim();
+      const category = typedCategory || categorySelect.value || 'Alternative Fashion';
+
+      for (const file of files) {
+        const src = await compressImageFile(file, 1200, 0.8);
+        uploadedImages.unshift({
+          id: Date.now() + Math.floor(Math.random() * 100000),
+          title: file.name.replace(/\.[^/.]+$/, ''),
+          category,
+          credit: '',
+          creditLink: '',
+          src
+        });
+      }
+
+      try {
+        saveImages();
+      } catch (error) {
+        console.error(error);
+        alert('Some images were too large for browser storage. Try uploading fewer images at once or smaller/compressed files.');
+      }
+      imageUpload.value = '';
+      folderUpload.value = '';
+      newCategoryInput.value = '';
+      selectedCategory = 'All';
+      currentPage = 1;
+      clearSelection();
+      renderAll();
+    }
+
+    function openPhotoModal(photoId) {
+      const image = uploadedImages.find(item => item.id === photoId);
+      if (!image) return;
+
+      activePhotoId = photoId;
+      modalImage.src = image.src;
+      modalImage.alt = image.title || 'Portfolio image';
+      modalTitle.textContent = image.title || 'Untitled';
+      detailCategory.textContent = image.category || 'Uncategorized';
+
+      if (image.creditLink) {
+        detailCredit.innerHTML = `<a href="${normalizeUrl(image.creditLink)}" target="_blank" rel="noopener">${escapeHtml(image.credit || image.creditLink)}</a>`;
+      } else {
+        detailCredit.textContent = image.credit || 'No credit listed yet.';
+      }
+
+      if (isAdmin()) {
+        modalModeLabel.textContent = 'Edit photo';
+        viewerDetails.style.display = 'none';
+        editTitle.value = image.title || '';
+        editCategory.value = image.category || '';
+        editCredit.value = image.credit || '';
+        editCreditLink.value = image.creditLink || '';
+      } else {
+        modalModeLabel.textContent = 'Photo details';
+        viewerDetails.style.display = 'block';
+      }
+
+      photoModal.classList.add('open');
+      photoModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closePhotoModal() {
+      photoModal.classList.remove('open');
+      photoModal.setAttribute('aria-hidden', 'true');
+      activePhotoId = null;
+    }
+
+    function savePhotoDetails(event) {
+      event.preventDefault();
+      if (!isAdmin() || activePhotoId === null) return;
+
+      const image = uploadedImages.find(item => item.id === activePhotoId);
+      if (!image) return;
+
+      image.title = editTitle.value.trim() || 'Untitled';
+      image.category = editCategory.value.trim() || 'Uncategorized';
+      image.credit = editCredit.value.trim();
+      image.creditLink = normalizeUrl(editCreditLink.value);
+
+      saveImages();
+      renderAll();
+      openPhotoModal(activePhotoId);
+      alert('Photo details saved.');
+    }
+
+    function deleteActivePhoto() {
+      if (!isAdmin() || activePhotoId === null) return;
+      const confirmed = confirm('Delete this photo from the local gallery?');
+      if (!confirmed) return;
+
+      uploadedImages = uploadedImages.filter(image => image.id !== activePhotoId);
+      selectedPhotoIds.delete(activePhotoId);
+      saveImages();
+      closePhotoModal();
+      renderAll();
+    }
+
+    function togglePhotoSelection(photoId) {
+      if (selectedPhotoIds.has(photoId)) {
+        selectedPhotoIds.delete(photoId);
+      } else {
+        selectedPhotoIds.add(photoId);
+      }
+      renderGallery();
+    }
+
+    function selectVisiblePhotos() {
+      if (!isAdmin()) return;
+      selectionMode = true;
+      updateSelectionModeClass();
+      getVisibleImages().forEach(image => selectedPhotoIds.add(image.id));
+      renderGallery();
+    }
+
+    function moveSelectedPhotos() {
+      if (!isAdmin() || selectedPhotoIds.size === 0) return;
+
+      const typedCategory = bulkNewCategoryInput.value.trim();
+      const category = typedCategory || bulkCategorySelect.value;
+
+      if (!category) {
+        alert('Choose or type a category first.');
+        return;
+      }
+
+      uploadedImages = uploadedImages.map(image => {
+        if (selectedPhotoIds.has(image.id)) {
+          return { ...image, category };
+        }
+        return image;
+      });
+
+      saveImages();
+      bulkNewCategoryInput.value = '';
+      selectedCategory = category;
+      currentPage = 1;
+      clearSelection();
+      renderAll();
+    }
+
+    function deleteSelectedPhotos() {
+      if (!isAdmin() || selectedPhotoIds.size === 0) return;
+
+      const count = selectedPhotoIds.size;
+      const confirmed = confirm(`Delete ${count} selected photo${count === 1 ? '' : 's'} from the local gallery?`);
+      if (!confirmed) return;
+
+      uploadedImages = uploadedImages.filter(image => !selectedPhotoIds.has(image.id));
+      selectedPhotoIds.clear();
+      saveImages();
+      renderAll();
+    }
+
+    function deleteCategory() {
+      if (!isAdmin()) return;
+
+      const category = deleteCategorySelect.value;
+      if (!category || category === 'All') return;
+
+      const affectedCount = uploadedImages.filter(image => image.category === category).length;
+      const confirmed = confirm(`Delete the category "${category}"? ${affectedCount} photo${affectedCount === 1 ? '' : 's'} will be moved to Uncategorized.`);
+      if (!confirmed) return;
+
+      uploadedImages = uploadedImages.map(image => {
+        if (image.category === category) {
+          return { ...image, category: 'Uncategorized' };
+        }
+        return image;
+      });
+
+      if (!deletedCategories.includes(category)) {
+        deletedCategories.push(category);
+      }
+
+      if (selectedCategory === category) {
+        selectedCategory = 'All';
+      }
+
+      selectedPhotoIds.clear();
+      currentPage = 1;
+      saveImages();
+      saveDeletedCategories();
+      renderAll();
+    }
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    document.addEventListener('keydown', event => {
+      const key = event.key.toLowerCase();
+      if (event.ctrlKey && event.altKey && key === 'd') {
+        event.preventDefault();
+        openAdminPrompt();
+      }
+      if (event.key === 'Escape') {
+        closePhotoModal();
+      }
+    });
+
+    adminLogoutBtn.addEventListener('click', () => setAdminMode(false));
+    setHeroPhotoBtn.addEventListener('click', setHeroPhoto);
+    resetHeroPhotoBtn.addEventListener('click', resetHeroPhoto);
+    saveTextBtn.addEventListener('click', saveSiteText);
+    resetTextBtn.addEventListener('click', resetSiteText);
+    addImagesBtn.addEventListener('click', addSelectedImages);
+
+    toggleSelectModeBtn.addEventListener('click', () => {
+      selectionMode = !selectionMode;
+      if (!selectionMode) selectedPhotoIds.clear();
+      updateSelectionModeClass();
+      renderGallery();
+    });
+
+    selectVisibleBtn.addEventListener('click', selectVisiblePhotos);
+    clearSelectionBtn.addEventListener('click', clearSelection);
+    moveSelectedBtn.addEventListener('click', moveSelectedPhotos);
+    deleteSelectedBtn.addEventListener('click', deleteSelectedPhotos);
+    deleteCategoryBtn.addEventListener('click', deleteCategory);
+
+    filterRow.addEventListener('click', event => {
+      if (!event.target.matches('.chip')) return;
+      selectedCategory = event.target.dataset.category;
+      currentPage = 1;
+      selectedPhotoIds.clear();
+      renderAll();
+    });
+
+    prevPageBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        renderGallery();
+      }
+    });
+
+    nextPageBtn.addEventListener('click', () => {
+      if (currentPage < getTotalPages()) {
+        currentPage += 1;
+        renderGallery();
+      }
+    });
+
+    galleryGrid.addEventListener('click', event => {
+      const card = event.target.closest('.photo-card');
+      if (!card) return;
+      const photoId = Number(card.dataset.id);
+
+      if (isAdmin() && selectionMode) {
+        togglePhotoSelection(photoId);
+        return;
+      }
+
+      openPhotoModal(photoId);
+    });
+
+    closeModalBtn.addEventListener('click', closePhotoModal);
+    photoModal.addEventListener('click', event => {
+      if (event.target === photoModal) closePhotoModal();
+    });
+
+    editForm.addEventListener('submit', savePhotoDetails);
+    deletePhotoBtn.addEventListener('click', deleteActivePhoto);
+
+    bookingForm.addEventListener('submit', event => {
+      event.preventDefault();
+      alert('Booking request demo submitted. Later we can connect this to email or a database.');
+      bookingForm.reset();
+    });
+
+    contactForm.addEventListener('submit', event => {
+      event.preventDefault();
+      alert('Contact form demo submitted. Later we can connect this to email or a database.');
+      contactForm.reset();
+    });
+
+    applySiteText();
+    applyVisibility();
+    applyHeroPhoto();
+    setAdminMode(isAdmin());
+  </script>
+</body>
+</html>
